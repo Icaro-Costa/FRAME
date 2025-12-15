@@ -34,7 +34,8 @@ const Team = () => {
             name: "Lucas Pires",
             role: "Maker & Design",
             image: lucasImg,
-            desc: "Prototipagem rápida e suporte em eletrônica."
+            desc: "Prototipagem rápida e suporte em eletrônica.",
+            position: "top"
         },
         {
             name: "Lívia Ariane",
@@ -78,6 +79,7 @@ const Team = () => {
                                         src={member.image}
                                         alt={member.name}
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        style={{ objectPosition: member.position || 'center' }}
                                     />
                                 ) : (
                                     <div className="w-full h-full flex items-center justify-center bg-gray-100">
