@@ -33,11 +33,12 @@ const Navbar = () => {
                                 </a>
                             ))}
                             <a
-                                href="#docs"
+                                href="/Manual-do-Professor.pdf"
+                                download
                                 className="bg-primary text-white px-4 py-2 rounded-full flex items-center gap-2 hover:bg-orange-400 transition-colors text-sm font-medium"
                             >
                                 <Download size={16} />
-                                Baixar Relatório
+                                Baixar Manual
                             </a>
                         </div>
                     </div>
@@ -72,6 +73,14 @@ const Navbar = () => {
                                     {item.name}
                                 </a>
                             ))}
+                            <a
+                                href="/Manual-do-Professor.pdf"
+                                download
+                                className="w-full mt-4 bg-primary text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 hover:bg-orange-400 transition-colors text-base font-medium"
+                            >
+                                <Download size={18} />
+                                Baixar Manual
+                            </a>
                         </div>
                     </motion.div>
                 )}

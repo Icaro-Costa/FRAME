@@ -2,25 +2,24 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
-// Importing gallery images
-import img1 from '../assets/images/Frente do v3.jpeg';
-import img2 from '../assets/images/V3-Frame.jpeg';
-import img3 from '../assets/images/Tapete 1.png';
-import img4 from '../assets/images/Ajeitando os botes do robo - Icaro fazendo isso.jpeg';
-import img5 from '../assets/images/Samuel furando o local do encode.jpeg';
-import img6 from '../assets/images/Ideacao do tapete e co frame.jpeg';
+// Importing gallery images dynamically
+const modules = import.meta.glob('../assets/images/*.{jpeg,png,jpg,svg}', { eager: true });
+
+const galleryImages = Object.entries(modules)
+    .map(([path, module]) => {
+        const filename = path.split('/').pop();
+        return {
+            filename,
+            src: module.default,
+            // Generate caption from filename: remove extension, replace dashes/underscores with spaces
+            caption: filename.split('.')[0].replace(/[-_]/g, ' ')
+        };
+    })
+    .filter(img => !img.filename.startsWith('Membro-'));
 
 const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
-
-    const images = [
-        { src: img1, caption: "Robô FRAME V3" },
-        { src: img3, caption: "Tapete Pedagógico - Cultura Recife" },
-        { src: img2, caption: "Design Final" },
-        { src: img4, caption: "Processo de Montagem" },
-        { src: img5, caption: "Fabricação do Chassi" },
-        { src: img6, caption: "Ideação e Planejamento" },
-    ];
+    const images = galleryImages;
 
     return (
         <section id="galeria" className="py-20 bg-light">

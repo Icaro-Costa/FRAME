@@ -5,7 +5,7 @@ import heroBg from '../assets/images/V3-Frame.jpeg'; // Using V3 robot image
 
 const Hero = () => {
     return (
-        <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section id="hero" className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-20 pb-10">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -28,7 +28,7 @@ const Hero = () => {
                         <span className="text-sm font-medium">Robótica Educacional & Cultura Maker</span>
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                    <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight">
                         FRAME
                         <span className="block text-primary text-2xl md:text-4xl mt-2 font-normal">
                             Framework Educacional Baseado em Robótica
