@@ -5,7 +5,10 @@ import { User } from 'lucide-react';
 // Importing images
 import icaroImg from '../assets/images/Membro-Icaro.jpeg';
 import samuelImg from '../assets/images/Membro-Saumuel.jpeg';
-import beatrizImg from '../assets/images/Beatriz mexendo no v1.jpeg';
+import beatrizImg from '../assets/images/Membro-Beatriz.jpeg';
+import lucasImg from '../assets/images/Membro-Lucas.jpeg';
+import liviaImg from '../assets/images/Membro-Livia.jpeg';
+import ystefaniImg from '../assets/images/Membro-Ystefani.jpeg';
 
 const Team = () => {
     const members = [
@@ -30,19 +33,19 @@ const Team = () => {
         {
             name: "Lucas Pires",
             role: "Maker & Design",
-            image: null,
+            image: lucasImg,
             desc: "Prototipagem rápida e suporte em eletrônica."
         },
         {
             name: "Lívia Ariane",
             role: "Pedagogia",
-            image: null,
+            image: liviaImg,
             desc: "Alinhamento com BNCC e estratégias educacionais."
         },
         {
             name: "Ystefani",
             role: "Ideação",
-            image: null,
+            image: ystefaniImg,
             desc: "Contribuição criativa e suporte pedagógico."
         }
     ];

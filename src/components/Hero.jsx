@@ -48,10 +48,11 @@ const Hero = () => {
                             <ArrowRight size={20} />
                         </a>
                         <a
-                            href="#docs"
+                            href="/Manual-do-Professor.pdf"
+                            download
                             className="px-8 py-4 bg-white hover:bg-gray-100 text-dark rounded-xl font-semibold transition-all"
                         >
-                            Ver Relatórios
+                            Baixar Manual
                         </a>
                     </div>
                 </motion.div>
