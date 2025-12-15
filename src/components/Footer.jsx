@@ -35,7 +35,7 @@ const Footer = () => {
                 </div>
 
                 <div className="pt-8 border-t border-white/10 text-center text-sm">
-                    <p>© 2024 Projeto FRAME. Todos os direitos reservados.</p>
+                    <p>© 2025 Projeto FRAME. Todos os direitos reservados.</p>
                 </div>
             </div>
         </footer>
